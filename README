@@ -1,0 +1,42 @@
+################################################################################
+Computer Science Class Advisor
+################################################################################
+Description:
+STUDENT ADVISOR for a Computer Science Student attending Roberts Wesleyan
+College (RWC).
+
+Author:	Curtis Moran moran_curtis@roberts.edu
+Date:	12/02/12
+Version:	0.1.0
+
+################################################################################
+HOW TO USE:
+
+	Compiles with GNU prolog as such:
+	['advisor.pl', 'students.pl', 'classes.pl', 'semester.pl'].
+		or,
+	['advisor.pl'].
+		because advisor.pl will consult those files as necessary when the main
+		function, suggestedClasses/1, has been called
+
+	EDIT FILES students.pl and semester as necessary
+
+################################################################################
+TODO:
+	ADD INTERFACE: Implement some interface (most likely web-based) to interface
+		between	prolog, the GUI and the user.
+
+	FIX PRIORITY CLASSES: Required classes should be most important, with
+		required number of electives coming next, and then lastly anything else.
+		Currently, the Advisor suggests you take every class 
+	
+	ADD GRADING SYSTEM SUPPORT: Manage classes also taking previous grades into
+		account.
+
+	WRITE DATABASE TO FILE: Find a way to properly write all dynamic predicates
+		back to file in an orderly fashion
+
+	FINISH THIS TODO: There are so many possibilities that not all of them can
+		be listed here.
+
+################################################################################
