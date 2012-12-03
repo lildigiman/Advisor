@@ -47,9 +47,10 @@ needClass(Student, Class) :-
 	% Make sure student has not taken it yet
 	\+ hasClass(Student, Class),
 	% Make sure student meets the prereqs
-	meetsPrereqs(Student, Class).
+	meetsPrereqs(Student, Class),
 
 	% TODO: Is either required or an elective
+	isRequired(Class).
 
 /*
  * See if the student has credit for a Class
@@ -64,6 +65,13 @@ meetsPrereqs(Student, Class) :-
 	prereq(Class, Prereqs),
 	% For every Prereq inside Prereqs, make sure it is a class not taken yet
 	\+ (member(Prereq, Prereqs), \+ hasClass(Student, Prereq)).
+
+/*
+ * Make sure the Class is required
+ * Note: For now we decide that all electives are required
+ */
+isRequired(Class) :-
+	required(Class); elective(Class).
 
 /*
  * Makes sure the student has room
