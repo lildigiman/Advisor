@@ -95,9 +95,9 @@ elective(csc411).
 
 /*
  * When the class is offered
- * TODO: make those that are offered multiple years and semesters applicable
+ * Duh - make classes both just by doing wildcards.
  */
-offered(csc101, fall, odd).
+offered(csc101, _, odd).
 offered(csc130, spring, odd). %
 offered(csc140, fall, even).
 offered(csc145, fall, even).
@@ -111,7 +111,7 @@ offered(csc250, fall, odd).
 offered(csc306, spring, even).
 offered(csc310, fall, odd).
 offered(csc311, fall, even).
-offered(csc312, spring, even).
+offered(csc312, _, _).
 offered(csc320, fall, even).
 offered(csc345, fall, even).
 offered(csc398, fall, fall).
@@ -123,6 +123,5 @@ offered(csc411, spring, odd). %
 offered(csc449, fall, even).
 offered(csc450, spring, odd). %
 offered(csc495, fall, even).
-offered(csc498, fall, fall). offered(csc498, fall, odd).
-/* One possible way to fix multiple offers ^^ */
+offered(csc498, fall, fall).
 

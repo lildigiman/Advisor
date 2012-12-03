@@ -42,6 +42,8 @@ creditFor(don, csc398, 'A').
 creditFor(don, csc402, 'A').
 creditFor(don, csc403, 'A').
 
+creditFor(willhoft, _, 'A').
+
 /*
  * Classes a student is currently enrolled in and taking
  * taking(student, class).
