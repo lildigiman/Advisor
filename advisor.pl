@@ -75,7 +75,7 @@ hasRoom(Student, Class) :-
 	OpenCredit >= ClassCredit.
 
 /*
- * Decrease a student's open credit hours as specified by a class' credit
+ * Decrease open credit hours as specified class credit for a student
  */
 addToCredit(Student, Class) :-
 	openCredit(Student, OpenCredit),
