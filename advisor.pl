@@ -44,7 +44,7 @@ getClasses(Student, Class) :-
 needClass(Student, Class) :-
 	% Get a class
 	class(Class, _, _),
-	% Make sure student hasn't taken it yet
+	% Make sure student has not taken it yet
 	\+ hasClass(Student, Class),
 	% Make sure student meets the prereqs
 	meetsPrereqs(Student, Class).
